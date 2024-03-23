@@ -1,6 +1,14 @@
+import { v4 } from 'uuid';
+
 export const DESTINATION_INFO = [
 	{
 		title: '01 PICK YOUR DESTINATION',
+		images: [
+			'./assets/destination/image-moon.webp',
+			'./assets/destination/image-mars.webp',
+			'./assets/destination/image-europa.webp',
+			'./assets/destination/image-titan.webp'
+		],
 		name: ['MOON', 'MARS', 'EUROPA', 'TITAN'],
 		text: [
 			'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
@@ -10,44 +18,20 @@ export const DESTINATION_INFO = [
 		],
 		stats: [
 			[
-				{
-					title: 'AVG. DISTANCE',
-					stat: '384,400 KM'
-				},
-				{
-					title: 'EST. TRAVEL TIME',
-					stat: '3 DAYS'
-				}
+				{ id: v4(), title: 'AVG. DISTANCE', stat: '384,400 KM' },
+				{ id: v4(), title: 'EST. TRAVEL TIME', stat: '3 DAYS' }
 			],
 			[
-				{
-					title: 'AVG. DISTANCE',
-					stat: '225 MIL. KM'
-				},
-				{
-					title: 'EST. TRAVEL TIME',
-					stat: '9 MONTHS'
-				}
+				{ id: v4(), title: 'AVG. DISTANCE', stat: '225 MIL. KM' },
+				{ id: v4(), title: 'EST. TRAVEL TIME', stat: '9 MONTHS' }
 			],
 			[
-				{
-					title: 'AVG. DISTANCE',
-					stat: '628 MIL. KM'
-				},
-				{
-					title: 'EST. TRAVEL TIME',
-					stat: '3 YEARS'
-				}
+				{ id: v4(), title: 'AVG. DISTANCE', stat: '628 MIL. KM' },
+				{ id: v4(), title: 'EST. TRAVEL TIME', stat: '3 YEARS' }
 			],
 			[
-				{
-					title: 'AVG. DISTANCE',
-					stat: '1.6 BIL. KM'
-				},
-				{
-					title: 'EST. TRAVEL TIME',
-					stat: '7 YEARS'
-				}
+				{ id: v4(), title: 'AVG. DISTANCE', stat: '1.6 BIL. KM' },
+				{ id: v4(), title: 'EST. TRAVEL TIME', stat: '7 YEARS' }
 			]
 		]
 	}
