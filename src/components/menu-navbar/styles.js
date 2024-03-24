@@ -3,11 +3,15 @@ import styled from 'styled-components';
 const StyledMenuContainer = styled.div`
 	width: 100%;
 	max-width: 1920px;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto;
+	margin-right: auto; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: absolute;
+	top: 2.5rem;
+	left: 50%;
+	transform: translateX(-50%);
 `;
 
 const StyledMenu = styled.ul`

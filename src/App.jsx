@@ -4,13 +4,13 @@ import Router from './router/Router';
 import { GlobalStyles } from './styles/global-styles';
 
 const App = () => {
-	console.log(DESTINATION_INFO[0].stats[0]);
-	return(
+	console.log(DESTINATION_INFO.stats[0]);
+	return (
 		<BrowserRouter>
 			<GlobalStyles />
 			<Router />
 		</BrowserRouter>
-	)
+	);
 };
 
 export default App;
