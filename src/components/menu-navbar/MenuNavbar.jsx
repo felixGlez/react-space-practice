@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MENU_NAVBAR } from '../../constants/menuNavbar';
 import {
+	StyledBar,
 	StyledLogo,
 	StyledLogoContainer,
 	StyledMenu,
@@ -13,6 +14,7 @@ const MenuNavbar = () => {
 			<StyledLogoContainer>
 				<StyledLogo src={'./assets/shared/logo.svg'} />
 			</StyledLogoContainer>
+			<StyledBar />
 			<StyledMenu>
 				{MENU_NAVBAR.map(menuItem => (
 					<li key={menuItem.id}>

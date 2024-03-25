@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 const StyledSectionContainer = styled.div`
 	width: 100%;
+	max-width: 1440px;
 	height: 100vh;
+	margin-inline: auto;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	background: url(${({ $background }) => $background});
 	background-size: cover;

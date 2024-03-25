@@ -13,12 +13,12 @@ export const MENU_NAVBAR = [
 	},
 	{
 		id: v4(),
-		section: '03 CREW',
+		section: '02 CREW',
 		path: '/crew'
 	},
 	{
 		id: v4(),
-		section: '04 TECHNOLOGY',
+		section: '03 TECHNOLOGY',
 		path: '/technology'
 	}
 ];
