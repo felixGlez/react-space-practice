@@ -2,9 +2,9 @@ export const CREW_INFO = {
 	title: '02 MEET YOUR CREW',
 	images: [
 		'./assets/crew/image-douglas-hurley.webp',
-		'public/assets/crew/image-mark-shuttleworth.webp',
-		'public/assets/crew/image-victor-glover.webp',
-		'public/assets/crew/image-anousheh-ansari.webp'
+		'./assets/crew/image-mark-shuttleworth.webp',
+		'./assets/crew/image-victor-glover.webp',
+		'./assets/crew/image-anousheh-ansari.webp'
 	],
 	roles: ['COMMANDER', 'MISSION SPECIALIST', 'PILOT', 'FLIGHT ENGINEER'],
 	name: [
