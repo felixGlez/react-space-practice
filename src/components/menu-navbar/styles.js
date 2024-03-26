@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FONTS } from '../../styles/fonts';
 
 const StyledMenuContainer = styled.div`
 	width: 100%;
@@ -41,7 +42,12 @@ const StyledMenu = styled.ul`
 	background-color: #ffffff0a;
 	padding: 30px 20px;
 	color: #ffffff;
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(25px);
+`;
+
+const StyledMenuItem = styled.li`
+	font-family: ${FONTS.secondary};
+	letter-spacing: 0.106rem;
 `;
 
 export {
@@ -49,5 +55,6 @@ export {
 	StyledLogo,
 	StyledMenu,
 	StyledLogoContainer,
-	StyledBar
+	StyledBar,
+	StyledMenuItem
 };

@@ -1,19 +1,18 @@
-import { useState } from 'react';
 import {
 	StyledCrewTabs,
 	StyledImgContainer,
 	StyledInfo,
 	StyledInfoContainer,
 	StyledSectionContainer,
-	StyledTabsContainer,
-	StyledTitle
+	StyledTabsContainer
 } from './styles';
 import { actualBg } from '../constants/functions';
 import { MENU_CREW_TABS } from '../constants/menuTabs';
 import { CREW_INFO } from '../constants/crewInfo';
+import { useTabs } from '../hooks/useTabs';
 
 const Crew = ({ path }) => {
-	const [tab, setTab] = useState(0);
+	const [tabs, handleTabs] = useTabs();
 
 	const background = actualBg(path);
 
@@ -24,16 +23,16 @@ const Crew = ({ path }) => {
 			<StyledInfoContainer>
 				<StyledTabsContainer>
 					{MENU_CREW_TABS.map((tab, index) => (
-						<StyledCrewTabs key={tab.id} onClick={() => setTab(index)} />
+						<StyledCrewTabs key={tab.id} onClick={() => handleTabs(index)} />
 					))}
 				</StyledTabsContainer>
-				<StyledTitle>{section.roles[tab]}</StyledTitle>
-				<StyledTitle>{section.name[tab]}</StyledTitle>
-				<StyledInfo>{section.text[tab]}</StyledInfo>
+				<h2>{section.roles[tabs]}</h2>
+				<h2>{section.name[tabs]}</h2>
+				<StyledInfo>{section.text[tabs]}</StyledInfo>
 			</StyledInfoContainer>
 			<StyledImgContainer>
 				<h1>{section.title}</h1>
-				<img src={section.images[tab]} />
+				<img src={section.images[tabs]} />
 			</StyledImgContainer>
 		</StyledSectionContainer>
 	);

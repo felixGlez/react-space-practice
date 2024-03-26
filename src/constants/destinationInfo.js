@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
 
 export const DESTINATION_INFO = {
-	title: '01 PICK YOUR DESTINATION',
+	title: 'PICK YOUR DESTINATION',
 	images: [
 		'./assets/destination/image-moon.webp',
 		'./assets/destination/image-mars.webp',

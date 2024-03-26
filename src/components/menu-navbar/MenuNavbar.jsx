@@ -5,7 +5,8 @@ import {
 	StyledLogo,
 	StyledLogoContainer,
 	StyledMenu,
-	StyledMenuContainer
+	StyledMenuContainer,
+	StyledMenuItem
 } from './styles';
 
 const MenuNavbar = () => {
@@ -17,9 +18,9 @@ const MenuNavbar = () => {
 			<StyledBar />
 			<StyledMenu>
 				{MENU_NAVBAR.map(menuItem => (
-					<li key={menuItem.id}>
+					<StyledMenuItem key={menuItem.id}>
 						<Link to={menuItem.path}>{menuItem.section}</Link>
-					</li>
+					</StyledMenuItem>
 				))}
 			</StyledMenu>
 		</StyledMenuContainer>

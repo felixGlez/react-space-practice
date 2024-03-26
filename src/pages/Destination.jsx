@@ -1,21 +1,25 @@
-import { useState } from 'react';
 import { DESTINATION_INFO } from '../constants/destinationInfo';
 import { MENU_DESTINATION_TABS } from '../constants/menuTabs';
 import {
 	StyledImgContainer,
+	StyledIndex,
 	StyledInfo,
 	StyledInfoContainer,
+	StyledPlanetName,
 	StyledSectionContainer,
+	StyledSeparator,
 	StyledStatsContainer,
 	StyledStatsStat,
 	StyledStatsTitle,
+	StyledTab,
 	StyledTabsContainer,
 	StyledTitle
 } from './styles';
 import { actualBg } from '../constants/functions';
+import { useTabs } from '../hooks/useTabs';
 
 const Destination = ({ path }) => {
-	const [tab, setTab] = useState(0);
+	const [tabs, handleTabs] = useTabs();
 
 	const section = DESTINATION_INFO;
 
@@ -24,21 +28,28 @@ const Destination = ({ path }) => {
 	return (
 		<StyledSectionContainer $background={background}>
 			<StyledImgContainer>
-				<h1>{section.title}</h1>
-				<img src={section.images[tab]} />
+				<StyledTitle>
+					<StyledIndex>01</StyledIndex> {section.title}
+				</StyledTitle>
+				<img src={section.images[tabs]} />
 			</StyledImgContainer>
 			<StyledInfoContainer>
 				<StyledTabsContainer>
 					{MENU_DESTINATION_TABS.map((tab, index) => (
-						<h3 key={tab.id} onClick={() => setTab(index)}>
+						<StyledTab
+							key={tab.id}
+							$isActive={tabs === index}
+							onClick={() => handleTabs(index)}
+						>
 							{tab.tab}
-						</h3>
+						</StyledTab>
 					))}
 				</StyledTabsContainer>
-				<StyledTitle>{section.name[tab]}</StyledTitle>
-				<StyledInfo>{section.text[tab]}</StyledInfo>
+				<StyledPlanetName>{section.name[tabs]}</StyledPlanetName>
+				<StyledInfo>{section.text[tabs]}</StyledInfo>
+				<StyledSeparator />
 				<StyledStatsContainer>
-					{section.stats[tab].map(stat => (
+					{section.stats[tabs].map(stat => (
 						<div key={stat.id}>
 							<StyledStatsTitle>{stat.title}</StyledStatsTitle>
 							<StyledStatsStat>{stat.stat}</StyledStatsStat>
