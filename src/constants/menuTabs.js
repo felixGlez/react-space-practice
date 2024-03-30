@@ -38,7 +38,7 @@ export const MENU_CREW_TABS = [
 	}
 ];
 
-export const TECHNOLOGY = [
+export const MENU_TECHNOLOGY_TABS = [
 	{
 		id: v4(),
 		tab: '1'

@@ -1,6 +1,54 @@
 import styled from 'styled-components';
 import { FONTS } from '../styles/fonts';
 
+// ---------HOME--------
+const StyledHomeInfoContainer = styled.div`
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-left: 5rem;
+`;
+
+const StyledHomeBtnContainer = styled(StyledHomeInfoContainer)`
+	align-items: center;
+	padding-top: 10rem;
+`;
+
+const StyledHomeBtn = styled.div`
+	width: 17.125rem;
+	height: 17.125rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+	border-radius: 50%;
+`;
+
+const StyledHomeBtnText = styled.h4`
+	font-family: ${FONTS.primary};
+	font-size: 2rem;
+	font-weight: 400;
+	letter-spacing: 0.125rem;
+	color: #0b0d17;
+`;
+
+const StyledHomeIntro = styled.h5`
+	font-family: ${FONTS.secondary};
+	font-size: 1.75rem;
+	color: #d0d6f9;
+	letter-spacing: 0.295rem;
+`;
+const StyledHomeTitle = styled.h1`
+	font-family: ${FONTS.primary};
+	font-size: 9.375rem;
+	font-weight: 400;
+	color: #ffffff;
+	margin-block: 0;
+`;
+
+// ---------DESTINATION--------
 const StyledSectionContainer = styled.div`
 	width: 100%;
 	max-width: 1440px;
@@ -20,7 +68,6 @@ const StyledImgContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	color: #ffffff;
 `;
 
 const StyledTitle = styled.h5`
@@ -40,7 +87,7 @@ const StyledIndex = styled.span`
 
 const StyledPlanetName = styled.h1`
 	font-family: ${FONTS.primary};
-	font-size: 9.375rem;
+	font-size: 6.25rem;
 	font-weight: 400;
 	color: #ffffff;
 	margin-block: 0;
@@ -133,5 +180,11 @@ export {
 	StyledTab,
 	StyledTitle,
 	StyledIndex,
-	StyledSeparator
+	StyledSeparator,
+	StyledHomeTitle,
+	StyledHomeIntro,
+	StyledHomeInfoContainer,
+	StyledHomeBtn,
+	StyledHomeBtnText,
+	StyledHomeBtnContainer
 };
