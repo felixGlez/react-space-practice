@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout';
 import Destination from '../pages/Destination';
 import Crew from '../pages/Crew';
 import Home from '../pages/Home';
+import Technology from '../pages/Technology';
 
 const Router = () => {
 	return (
@@ -14,7 +15,10 @@ const Router = () => {
 					element={<Destination path={'/destination'} />}
 				/>
 				<Route path={'/crew'} element={<Crew path={'/crew'} />} />
-				<Route path={'/technology'} element={<h1>Technology</h1>} />
+				<Route
+					path={'/technology'}
+					element={<Technology path={'/technology'} />}
+				/>
 			</Route>
 		</Routes>
 	);

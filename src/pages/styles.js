@@ -17,6 +17,7 @@ const StyledHomeBtnContainer = styled(StyledHomeInfoContainer)`
 `;
 
 const StyledHomeBtn = styled.div`
+	position: relative;
 	width: 17.125rem;
 	height: 17.125rem;
 	display: flex;
@@ -24,6 +25,23 @@ const StyledHomeBtn = styled.div`
 	align-items: center;
 	background-color: #ffffff;
 	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s;
+
+	&::after {
+		content: '';
+		width: 0;
+		height: 0;
+		background-color: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		border-radius: 50%;
+		transition: 0.3s;
+	}
+
+	&:hover::after {
+		width: 28.125rem;
+		height: 28.125rem;
+	}
 `;
 
 const StyledHomeBtnText = styled.h4`
@@ -166,6 +184,72 @@ const StyledCrewTabs = styled.div`
 	cursor: pointer;
 `;
 
+// ---------TECHNOLOGY--------
+const StyledTechInfoContainer = styled.div`
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+`;
+
+const StyledTechTabsContainer = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+`;
+
+const StyledTechTabs = styled.div`
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+`;
+
+const StyledTechTab = styled.div`
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	// 1px solid white;
+	border: ${({ $isActive }) =>
+		$isActive ? 'none' : '1px solid rgba(255, 255, 255, 0.25);'};
+	background-color: ${({ $isActive }) => $isActive && '#ffffff'};
+	color: ${({ $isActive }) => ($isActive ? '#0B0D17' : '#ffffff')};
+	font-family: ${FONTS.primary};
+	font-size: 2rem;
+	font-weight: 400;
+`;
+
+const StyledTechInfo = styled.div`
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+`;
+
+const StyledTechTitle = styled.h3`
+	font-family: ${FONTS.primary};
+	font-weight: 400;
+	font-size: 3.5rem;
+	color: #ffffff;
+	margin-block: 0;
+`;
+
+const StyledTechImgContainer = styled.div`
+	width: 40%;
+	display: flex;
+`;
+
+const StyledTechImg = styled.img`
+	width: 100%;
+`;
+
 export {
 	StyledSectionContainer,
 	StyledImgContainer,
@@ -186,5 +270,13 @@ export {
 	StyledHomeInfoContainer,
 	StyledHomeBtn,
 	StyledHomeBtnText,
-	StyledHomeBtnContainer
+	StyledHomeBtnContainer,
+	StyledTechInfoContainer,
+	StyledTechTabsContainer,
+	StyledTechTabs,
+	StyledTechTab,
+	StyledTechTitle,
+	StyledTechInfo,
+	StyledTechImg,
+	StyledTechImgContainer
 };
