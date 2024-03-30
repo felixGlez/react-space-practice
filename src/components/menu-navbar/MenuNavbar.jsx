@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { MENU_NAVBAR } from '../../constants/menuNavbar';
 import {
 	StyledBar,
@@ -6,7 +5,8 @@ import {
 	StyledLogoContainer,
 	StyledMenu,
 	StyledMenuContainer,
-	StyledMenuItem
+	StyledMenuItem,
+	StyledNavLink
 } from './styles';
 
 const MenuNavbar = () => {
@@ -19,7 +19,7 @@ const MenuNavbar = () => {
 			<StyledMenu>
 				{MENU_NAVBAR.map(menuItem => (
 					<StyledMenuItem key={menuItem.id}>
-						<Link to={menuItem.path}>{menuItem.section}</Link>
+						<StyledNavLink to={menuItem.path}>{menuItem.section}</StyledNavLink>
 					</StyledMenuItem>
 				))}
 			</StyledMenu>

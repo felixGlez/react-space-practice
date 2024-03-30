@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FONTS } from '../../styles/fonts';
+import { NavLink } from 'react-router-dom';
 
 const StyledMenuContainer = styled.div`
 	width: 100%;
@@ -50,11 +51,21 @@ const StyledMenuItem = styled.li`
 	letter-spacing: 0.106rem;
 `;
 
+const StyledNavLink = styled(NavLink)`
+	text-decoration: none;
+
+	&.active {
+		border-bottom: 3px solid #ffffff;
+		padding-bottom: 1.625rem;
+	}
+`;
+
 export {
 	StyledMenuContainer,
 	StyledLogo,
 	StyledMenu,
 	StyledLogoContainer,
 	StyledBar,
-	StyledMenuItem
+	StyledMenuItem,
+	StyledNavLink
 };
